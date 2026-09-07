@@ -76,11 +76,27 @@
         <main>
             <!-- Row 4 -->
             <div class="row">
-                <div class="container col">
+                <div class="container col-md-6">
                     <section>
-                        <h2>Placeholder page</h2>
-                        <p>This is a placeholder page for all content pages, used for testing your links.</p>
-                        <p>Click 'Home' in the main navigation to go back.</p>
+                        <h2 class="mb-3 text-center">Post an Announcement</h2>
+                        <form class="announcement" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php"
+                            method="post" name="announcement">
+
+                            <!--Adding the hidden field-->
+                            <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" name="title" id="announcement_title" size="30"
+                                    maxlength="30" placeholder="Title">
+                                <label for="announcement_title" class="form-label">Title</label>
+                            </div>
+                            <div class="form-floating mb-2">
+                                <textarea class="form-control" name="body" id="announcement_body" size="30"
+                                    maxlength="30" placeholder="Title"></textarea>
+                                <label for="announcement_body" class="form-label">Body</label>
+                            </div>
+
+                            <input type="submit" name="Post" value="Post Announcement" class="btn btn-primary m-2">
+                        </form>
                     </section>
                 </div>
             </div>
