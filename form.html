@@ -7,8 +7,8 @@
     <meta name="description" content="An online learning resource by students for students">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css"><!-- Bootstrap stylesheet -->
-    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"><!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="./css/custom.css">
     <!-- Custom stylesheet - linked after Bootstrap so that entries here take precedence and override Bootstrap's style -->
 </head>
 
@@ -78,24 +78,100 @@
             <div class="row">
                 <div class="container col-md-6">
                     <section>
-                        <h2 class="mb-3 text-center">Post an Announcement</h2>
+                        <h2 class="mb-3 text-left">Post an Announcement</h2>
                         <form class="announcement" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php"
                             method="post" name="announcement">
 
                             <!--Adding the hidden field-->
                             <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
+
+
+
+
+
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control" name="title" id="announcement_title" size="30"
-                                    maxlength="30" placeholder="Title">
-                                <label for="announcement_title" class="form-label">Title</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <textarea class="form-control" name="body" id="announcement_body" size="30"
-                                    maxlength="30" placeholder="Title"></textarea>
-                                <label for="announcement_body" class="form-label">Body</label>
+                                <input type="text" class="form-control" name="Subject" id="announcement_subject"
+                                    size="30" placeholder="Title">
+                                <label for="announcement_subject" class="form-label">Subject (5 Words maximum)</label>
                             </div>
 
-                            <input type="submit" name="Post" value="Post Announcement" class="btn btn-primary m-2">
+
+
+
+                            <h3 class="mb-3 text-left">Sender Details</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" class="form-control" name="Sender" id="announcement_sender"
+                                            size="30" placeholder="Sender Name">
+                                        <label for="announcement_sender" class="form-label">Sender Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <select class="form-select" name="Role" id="announcement_sender_role">
+                                            <option value="None">Please select...</option>
+                                            <option value="module lead">Module Lead</option>
+                                            <option value="administrator">Administrator</option>
+                                            <option value="module assistant">Module Assistant</option>
+                                        </select>
+                                        <label for="announcement_sender_role" class="form-label">Role</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <h3 class="mb-3 text-left">Date & Time</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <input type="date" class="form-control" name="Date" id="announcement_date"
+                                            size="30">
+                                        <label for="announcement_date" class="form-label">Schedule Send Date</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-2">
+                                        <input type="time" class="form-control" name="Time" id="announcement_time"
+                                            size="30">
+                                        <label for="announcement_time" class="form-label">Schedule Send Time</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <h3 class="mb-3 text-left">Priority & Content</h3>
+                            <div class="form-floating mb-2">
+                                <select class="form-select" name="Priority" id="announcement_priority">
+                                    <option value="low">Low</option>
+                                    <option value="normal" selected>Normal</option>
+                                    <option value="high">High</option>
+                                </select>
+                                <label for="announcement_sender_role" class="form-label">Priority</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <textarea class="form-control" name="Content" id="announcement_content"
+                                    rows="6"></textarea>
+                                <label for="announcement_body" class="form-label">Announcement Content</label>
+                            </div>
+
+                            <h3 class="mb-3 text-left">Attachment</h3>
+                            <div class="row">
+                                <div class="col-md-6 text-left">
+                                    <input type="file" class="form-control" id="announcement_attachment"
+                                        name="Attachment" size="10">
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <input type="submit" name="Post" value="Post Announcement"
+                                        class="btn btn-primary m-2">
+                                </div>
+                            </div>
                         </form>
                     </section>
                 </div>
@@ -119,7 +195,7 @@
             </div>
         </footer>
     </div>
-    <script src="../js/bootstrap.min.js"></script><!-- Bootstrap JavaScript -->
+    <script src="./js/bootstrap.min.js"></script><!-- Bootstrap JavaScript -->
 </body>
 
 </html>

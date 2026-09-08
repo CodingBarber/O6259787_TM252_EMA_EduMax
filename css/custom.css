@@ -13,3 +13,7 @@ form.register {
     border-radius: 15px;
     padding: 15px;
 }
+
+#announcement_content {
+    height: 300px;
+}
