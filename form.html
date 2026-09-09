@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col">
                     <!-- logo -->
-                    <img src="../images/EduMax_logo.png" alt="EduMax logo" class="img-fluid">
+                    <img src="./images/EduMax_logo.png" alt="EduMax logo" class="img_logo">
                 </div>
                 <div class="col">
                     <!-- site name -->
@@ -67,7 +67,9 @@
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <!-- breadcrumbs -->
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        <li class="breadcrumb-item" aria-current="page">Home</li>
+                        <li class="breadcrumb-item" aria-current="page">Your Infomation</li>
+                        <li class="breadcrumb-item active" aria-current="page">Announcements archive</li>
                     </ol>
                 </nav>
             </div>
@@ -91,8 +93,9 @@
 
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="Subject" id="announcement_subject"
-                                    size="30" placeholder="Title">
-                                <label for="announcement_subject" class="form-label">Subject (5 Words maximum)</label>
+                                    size="30" placeholder="Title" value="Exams revision timetable">
+                                <label for="announcement_subject" class="form-label">Announcement Subject (5 Words
+                                    maximum)</label>
                             </div>
 
 
@@ -103,7 +106,7 @@
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
                                         <input type="text" class="form-control" name="Sender" id="announcement_sender"
-                                            size="30" placeholder="Sender Name">
+                                            size="30" placeholder="Sender Name" value="Cody Barber">
                                         <label for="announcement_sender" class="form-label">Sender Name</label>
                                     </div>
                                 </div>
@@ -111,7 +114,7 @@
                                     <div class="form-floating mb-2">
                                         <select class="form-select" name="Role" id="announcement_sender_role">
                                             <option value="None">Please select...</option>
-                                            <option value="module lead">Module Lead</option>
+                                            <option value="module lead" selected>Module Lead</option>
                                             <option value="administrator">Administrator</option>
                                             <option value="module assistant">Module Assistant</option>
                                         </select>
@@ -128,7 +131,7 @@
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
                                         <input type="date" class="form-control" name="Date" id="announcement_date"
-                                            size="30">
+                                            size="30" value="2026-10-01">
                                         <label for="announcement_date" class="form-label">Schedule Send Date</label>
                                     </div>
                                 </div>
@@ -136,9 +139,18 @@
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
                                         <input type="time" class="form-control" name="Time" id="announcement_time"
-                                            size="30">
+                                            size="30" value="14:30">
                                         <label for="announcement_time" class="form-label">Schedule Send Time</label>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="mb-2">
+                                    <input type="checkbox" name="Send Now" id="announcement_send_now">
+                                    <label for="announcement_send_now" class="form-label">Post Now?</label>
+                                    <p>If Selected, the announcement will be sent as soon as you click <i>Post
+                                            Announcement</i></p>
                                 </div>
                             </div>
 
@@ -157,8 +169,8 @@
 
                             <div class="form-floating mb-2">
                                 <textarea class="form-control" name="Content" id="announcement_content"
-                                    rows="6"></textarea>
-                                <label for="announcement_body" class="form-label">Announcement Content</label>
+                                    rows="6">This is an example of what you might want to put into the content of the announcement!</textarea>
+                                <label for="announcement_content" class="form-label">Announcement Content</label>
                             </div>
 
                             <h3 class="mb-3 text-left">Attachment</h3>
@@ -169,7 +181,7 @@
                                 </div>
                                 <div class="col-md-6 text-end">
                                     <input type="submit" name="Post" value="Post Announcement"
-                                        class="btn btn-primary m-2">
+                                        class="btn btn-primary m-2" id="form_submit">
                                 </div>
                             </div>
                         </form>
@@ -196,6 +208,7 @@
         </footer>
     </div>
     <script src="./js/bootstrap.min.js"></script><!-- Bootstrap JavaScript -->
+    <script src="./js/custom.js"></script>
 </body>
 
 </html>
