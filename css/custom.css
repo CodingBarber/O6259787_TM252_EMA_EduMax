@@ -14,6 +14,8 @@ form.register {
     padding: 15px;
 }
 
+
+/* Increasese the height of the textarea for the announcement content */
 #announcement_content {
     height: 300px;
 }

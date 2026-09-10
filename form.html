@@ -81,16 +81,18 @@
                 <div class="container col-md-6">
                     <section>
                         <h2 class="mb-3 text-left">Post an Announcement</h2>
+
+                        <!--Sends the form data to the 'reflect' endpoint as a post request-->
                         <form class="announcement" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php"
                             method="post" name="announcement">
+
 
                             <!--Adding the hidden field-->
                             <input type="hidden" name="item_ID" value="30001000-5000-654321fedcba">
 
 
 
-
-
+                            <!--Addeding Subject field and flagging it as required. Checking if the Subject is more than 5 words would be done server side.-->
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="Subject" id="announcement_subject"
                                     size="30" placeholder="Subject" value="Exams revision timetable" required>
@@ -101,7 +103,7 @@
 
 
 
-
+                            <!--Addeding a h3 tag to sub-divide the form into more manageable chucks. Im also creating a new row so that Sender name and Role can appear on the same row-->
                             <h3 class="mb-3 text-left">Sender Details</h3>
                             <div class="row">
                                 <div class="col-md-6">
@@ -114,6 +116,8 @@
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
                                         <select class="form-select" name="Role" id="announcement_sender_role" required>
+                                            <!--Ive added a 'Please select...' option to avoid users leaving a default, potentailly incorrect option selected.
+                                            The 'required' key word makes this option invalid if the form is submitted with this value -->
                                             <option value="">Please select...</option>
                                             <option value="module lead" selected>Module Lead</option>
                                             <option value="administrator">Administrator</option>
@@ -126,7 +130,7 @@
 
 
 
-
+                            <!--Again, addeding a h3 tag to sub-divide the form into more manageable chucks. I'm again displaying the data on a single -->
                             <h3 class="mb-3 text-left">Date & Time</h3>
                             <div class="row">
                                 <div class="col-md-6">
@@ -148,6 +152,8 @@
 
                             <div>
                                 <div class="mb-2">
+                                    <!-- Its intented that this checkbox can be selected to send an announcement as soon as the Post Announcement button is clicked.
+                                    To avoid confuseion, I've added a p tag that explains the functionality to the user. -->
                                     <input type="checkbox" name="Send Now" id="announcement_send_now"
                                         alt="Post now checkbox">
                                     <label for="announcement_send_now" class="form-label">Post Now?</label>
@@ -162,6 +168,7 @@
                             <h3 class="mb-3 text-left">Priority & Content</h3>
                             <div class="form-floating mb-2">
                                 <select class="form-select" name="Priority" id="announcement_priority">
+                                    <!-- Here, ive set the default option to 'Normal' as changing to a lower or higher priorty should be a deliberate action -->
                                     <option value="low">Low</option>
                                     <option value="normal" selected>Normal</option>
                                     <option value="high">High</option>
@@ -175,7 +182,7 @@
                                 <label for="announcement_content" class="form-label">Announcement Content</label>
                             </div>
 
-                            <h3 class="mb-3 text-left">Attachment</h3>
+                            <h3 class="mb-3 text-left">Attachment (Optional)</h3>
                             <div class="row">
                                 <div class="col-md-6 text-left">
                                     <input type="file" class="form-control" id="announcement_attachment"
