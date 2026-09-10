@@ -93,8 +93,9 @@
 
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="Subject" id="announcement_subject"
-                                    size="30" placeholder="Title" value="Exams revision timetable">
-                                <label for="announcement_subject" class="form-label">Announcement Subject (5 Words
+                                    size="30" placeholder="Subject" value="Exams revision timetable" required>
+                                <label for="announcement_subject" class="form-label">Announcement
+                                    Subject (5 Words
                                     maximum)</label>
                             </div>
 
@@ -106,14 +107,14 @@
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
                                         <input type="text" class="form-control" name="Sender" id="announcement_sender"
-                                            size="30" placeholder="Sender Name" value="Cody Barber">
+                                            size="30" placeholder="Sender Name" value="Cody Barber" required>
                                         <label for="announcement_sender" class="form-label">Sender Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating mb-2">
-                                        <select class="form-select" name="Role" id="announcement_sender_role">
-                                            <option value="None">Please select...</option>
+                                        <select class="form-select" name="Role" id="announcement_sender_role" required>
+                                            <option value="">Please select...</option>
                                             <option value="module lead" selected>Module Lead</option>
                                             <option value="administrator">Administrator</option>
                                             <option value="module assistant">Module Assistant</option>
@@ -147,9 +148,10 @@
 
                             <div>
                                 <div class="mb-2">
-                                    <input type="checkbox" name="Send Now" id="announcement_send_now">
+                                    <input type="checkbox" name="Send Now" id="announcement_send_now"
+                                        alt="Post now checkbox">
                                     <label for="announcement_send_now" class="form-label">Post Now?</label>
-                                    <p>If Selected, the announcement will be sent as soon as you click <i>Post
+                                    <p>If Selected, your announcement will be posted upon clicking <i>Post
                                             Announcement</i></p>
                                 </div>
                             </div>

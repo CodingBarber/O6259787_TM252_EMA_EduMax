@@ -6,6 +6,8 @@ const form_submit = document.getElementById("form_submit");
 function toggleDateTime() {
     date.disabled = sendNow.checked;
     time.disabled = sendNow.checked;
+    date.required = !sendNow.checked;
+    time.required = !sendNow.checked;
 }
 
 sendNow.addEventListener("change", toggleDateTime);
